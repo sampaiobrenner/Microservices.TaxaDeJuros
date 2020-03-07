@@ -1,8 +1,10 @@
 using Microservices.TaxasDeJuros.Repositories;
-using Microservices.TaxasDeJuros.Repositories.Seed;
+using Microservices.TaxasDeJuros.Repositories.Context;
+using Microservices.TaxasDeJuros.Repositories.Seeds;
 using Microservices.TaxasDeJuros.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -26,6 +28,11 @@ namespace Microservices.TaxasDeJuros.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+            services.AddApiVersioning();
+
+            services.AddDbContext<ApplicationDbContext>(opt => opt.UseInMemoryDatabase("microservices-taxa-de-juros"));
+
             IocServices.Register(services);
             IocRepositories.Register(services);
         }

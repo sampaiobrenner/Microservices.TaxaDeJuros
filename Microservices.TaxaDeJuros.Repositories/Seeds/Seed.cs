@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microservices.TaxasDeJuros.Repositories.Seed
+namespace Microservices.TaxasDeJuros.Repositories.Seeds
 {
     public class Seed : ISeed
     {

@@ -1,4 +1,4 @@
-﻿namespace Microservices.TaxasDeJuros.Repositories.Seed
+﻿namespace Microservices.TaxasDeJuros.Repositories.Seeds
 {
     public interface ISeed
     {
