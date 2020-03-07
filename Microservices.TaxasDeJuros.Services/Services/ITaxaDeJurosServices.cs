@@ -4,6 +4,6 @@ namespace Microservices.TaxasDeJuros.Services.Services
 {
     public interface ITaxaDeJurosServices
     {
-        Task<decimal> GetTaxaDeJurosPadrao();
+        Task<decimal> GetTaxaDeJurosPadraoAsync();
     }
 }

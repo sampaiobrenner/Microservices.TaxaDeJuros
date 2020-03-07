@@ -12,7 +12,7 @@ namespace Microservices.TaxasDeJuros.Repositories.Seeds
     {
         private readonly IApplicationDbContext _context;
 
-        protected Seed(IApplicationDbContext context) => _context = context;
+        public Seed(IApplicationDbContext context) => _context = context;
 
         public void Execute() => ExecuteAsync().Wait();
 

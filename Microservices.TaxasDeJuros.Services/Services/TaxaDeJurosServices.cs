@@ -1,4 +1,5 @@
-﻿using Microservices.TaxasDeJuros.Repositories.Repositories;
+﻿using Microservices.TaxasDeJuros.Entities.Entities;
+using Microservices.TaxasDeJuros.Repositories.Repositories;
 using System.Threading.Tasks;
 
 namespace Microservices.TaxasDeJuros.Services.Services
@@ -9,6 +10,6 @@ namespace Microservices.TaxasDeJuros.Services.Services
 
         public TaxaDeJurosServices(ITaxaDeJurosRepository taxaDeJurosRepository) => _taxaDeJurosRepository = taxaDeJurosRepository;
 
-        public Task<decimal> GetTaxaDeJurosPadrao() => _taxaDeJurosRepository.GetTaxaDeJurosPadrao();
+        public Task<decimal> GetTaxaDeJurosPadraoAsync() => _taxaDeJurosRepository.GetValor<TaxaDeJurosPadrao>();
     }
 }

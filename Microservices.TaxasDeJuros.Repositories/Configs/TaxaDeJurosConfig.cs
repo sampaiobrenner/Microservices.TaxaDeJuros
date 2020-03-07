@@ -8,9 +8,10 @@ namespace Microservices.TaxasDeJuros.Repositories.Configs
     {
         public void Configure(EntityTypeBuilder<TaxaDeJuros> builder)
         {
+            builder.ToTable(nameof(TaxaDeJuros));
             builder.HasKey(x => x.Id);
 
-            builder.HasDiscriminator()
+            builder.HasDiscriminator<string>("Discriminator")
                 .HasValue<TaxaDeJurosPadrao>(nameof(TaxaDeJurosPadrao))
                 .HasValue<TaxaDeJurosReduzida>(nameof(TaxaDeJurosReduzida));
 

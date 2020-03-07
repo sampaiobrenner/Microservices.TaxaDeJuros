@@ -10,5 +10,11 @@ namespace Microservices.TaxasDeJuros.Repositories.Context
         }
 
         public DbSet<TaxaDeJuros> TaxasDeJuros { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

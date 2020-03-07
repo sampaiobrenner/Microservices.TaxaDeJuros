@@ -3,9 +3,9 @@ using System;
 
 namespace Microservices.TaxasDeJuros.Entities.Entities
 {
-    public abstract class TaxaDeJuros : EntityBase
+    public class TaxaDeJuros : EntityBase
     {
-        protected TaxaDeJuros(Guid id, decimal valor) : base(id) => SetValor(valor);
+        public TaxaDeJuros(Guid id, decimal valor) : base(id) => SetValor(valor);
 
         public decimal Valor { get; private set; }
 

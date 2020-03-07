@@ -1,6 +1,7 @@
 ﻿using Microservices.TaxasDeJuros.Services.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace Microservices.TaxasDeJuros.WebApi.Controllers.v1
 {
@@ -16,11 +17,11 @@ namespace Microservices.TaxasDeJuros.WebApi.Controllers.v1
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_taxaDeJurosServices.GetTaxaDeJurosPadrao());
+                return Ok(await _taxaDeJurosServices.GetTaxaDeJurosPadraoAsync());
             }
             catch (Exception ex)
             {

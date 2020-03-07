@@ -40,8 +40,10 @@ namespace Microservices.TaxasDeJuros.WebApi
         private void MigrateDatabase(IApplicationBuilder app)
         {
             using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
-            var seed = serviceScope.ServiceProvider.GetService<ISeed>();
+            using var context = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
+            context.Database.EnsureCreated();
 
+            var seed = serviceScope.ServiceProvider.GetService<ISeed>();
             seed.Execute();
         }
     }
