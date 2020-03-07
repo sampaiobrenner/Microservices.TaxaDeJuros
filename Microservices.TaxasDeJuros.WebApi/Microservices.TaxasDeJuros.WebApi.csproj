@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microservices.TaxaDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj" />
-    <ProjectReference Include="..\Microservices.TaxaDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj" />
+    <ProjectReference Include="..\Microservices.TaxasDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj" />
+    <ProjectReference Include="..\Microservices.TaxasDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj" />
   </ItemGroup>
 
 </Project>
