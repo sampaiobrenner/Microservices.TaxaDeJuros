@@ -1,6 +1,6 @@
-﻿using Microservices.TaxaDeJuros.Entities.Base;
+﻿using Microservices.TaxasDeJuros.Entities.Base;
 
-namespace Microservices.TaxaDeJuros.Entities.Builders
+namespace Microservices.TaxasDeJuros.Entities.Builders
 {
     public abstract class TaxaDeJurosBuilder<TBuilder, TEntity> : BuilderBase<TBuilder, TEntity>
         where TBuilder : TaxaDeJurosBuilder<TBuilder, TEntity>

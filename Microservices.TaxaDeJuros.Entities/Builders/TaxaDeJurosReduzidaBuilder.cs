@@ -1,6 +1,6 @@
-﻿using Microservices.TaxaDeJuros.Entities.Entities;
+﻿using Microservices.TaxasDeJuros.Entities.Entities;
 
-namespace Microservices.TaxaDeJuros.Entities.Builders
+namespace Microservices.TaxasDeJuros.Entities.Builders
 {
     public sealed class TaxaDeJurosReduzidaBuilder : TaxaDeJurosBuilder<TaxaDeJurosReduzidaBuilder, TaxaDeJurosReduzida>
     {

@@ -10,4 +10,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microservices.TaxaDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj" />
+    <ProjectReference Include="..\Microservices.TaxaDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj" />
+  </ItemGroup>
+
 </Project>

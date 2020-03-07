@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microservices.TaxaDeJuros.Entities.Entities
+namespace Microservices.TaxasDeJuros.Entities.Entities
 {
     public sealed class TaxaDeJurosReduzida : TaxaDeJuros
     {

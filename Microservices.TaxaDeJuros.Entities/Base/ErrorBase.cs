@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 
-namespace Microservices.TaxaDeJuros.Entities.Base
+namespace Microservices.TaxasDeJuros.Entities.Base
 {
     public abstract class ErrorBase
     {

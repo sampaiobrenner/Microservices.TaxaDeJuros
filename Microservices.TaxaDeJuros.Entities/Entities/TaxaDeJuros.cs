@@ -1,7 +1,7 @@
-﻿using Microservices.TaxaDeJuros.Entities.Base;
+﻿using Microservices.TaxasDeJuros.Entities.Base;
 using System;
 
-namespace Microservices.TaxaDeJuros.Entities.Entities
+namespace Microservices.TaxasDeJuros.Entities.Entities
 {
     public abstract class TaxaDeJuros : EntityBase
     {

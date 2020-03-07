@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxaDeJuros.WebApi", "Microservices.TaxaDeJuros.WebApi\Microservices.TaxaDeJuros.WebApi.csproj", "{02D13E0D-17D7-459A-B2C9-836ACAF57313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.WebApi", "Microservices.TaxaDeJuros.WebApi\Microservices.TaxasDeJuros.WebApi.csproj", "{02D13E0D-17D7-459A-B2C9-836ACAF57313}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxaDeJuros.Services", "Microservices.TaxaDeJuros.Services\Microservices.TaxaDeJuros.Services.csproj", "{F2A3717B-7233-44E3-B2EB-4174A7663383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Services", "Microservices.TaxaDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj", "{F2A3717B-7233-44E3-B2EB-4174A7663383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxaDeJuros.Entities", "Microservices.TaxaDeJuros.Entities\Microservices.TaxaDeJuros.Entities.csproj", "{292C5F56-B8D5-42DE-922D-4A19018619DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Entities", "Microservices.TaxaDeJuros.Entities\Microservices.TaxasDeJuros.Entities.csproj", "{292C5F56-B8D5-42DE-922D-4A19018619DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxaDeJuros.Repositories", "Microservices.TaxaDeJuros.Repositories\Microservices.TaxaDeJuros.Repositories.csproj", "{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Repositories", "Microservices.TaxaDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj", "{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{97E8ED22-EB53-4F11-A3D9-10463935A4B3}"
 EndProject
