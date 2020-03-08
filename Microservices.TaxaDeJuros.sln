@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{97E8ED22-EB53-4F11-A3D9-10463935A4B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Entities.UnitTests", "..\Microservices.TaxasDeJuros.Entities.Tests\Microservices.TaxasDeJuros.Entities.UnitTests.csproj", "{444E6DBD-DCBD-44AB-B872-BAC9E070A981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Entities.UnitTests", "Microservices.TaxasDeJuros.Entities.Tests\Microservices.TaxasDeJuros.Entities.UnitTests.csproj", "{444E6DBD-DCBD-44AB-B872-BAC9E070A981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxasDeJuros.WebApi.IntegrationTests", "..\Microservices.TaxasDeJuros.WebApi.IntegrationTests\Microservices.TaxasDeJuros.WebApi.IntegrationTests.csproj", "{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxasDeJuros.WebApi.IntegrationTests", "Microservices.TaxasDeJuros.WebApi.IntegrationTests\Microservices.TaxasDeJuros.WebApi.IntegrationTests.csproj", "{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
