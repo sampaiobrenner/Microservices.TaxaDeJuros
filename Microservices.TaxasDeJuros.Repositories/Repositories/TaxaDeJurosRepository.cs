@@ -12,7 +12,10 @@ namespace Microservices.TaxasDeJuros.Repositories.Repositories
 
         public TaxaDeJurosRepository(IApplicationDbContext context) => _context = context;
 
-        public Task<decimal> GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
+        public decimal GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
+            _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefault();
+
+        public Task<decimal> GetValorAsync<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
             _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefaultAsync();
     }
 }

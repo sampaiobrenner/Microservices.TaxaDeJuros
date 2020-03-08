@@ -4,7 +4,7 @@ namespace Microservices.TaxasDeJuros.Services.Services
 {
     public interface ITaxaDeJurosServices
     {
-        Task<decimal> GetTaxaDeJurosPadraoAsync();
+        decimal GetTaxaDeJurosPadrao();
 
         Task<decimal> GetTaxaDeJurosReduzidaAsync();
     }

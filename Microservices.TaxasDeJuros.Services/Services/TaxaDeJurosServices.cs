@@ -10,8 +10,8 @@ namespace Microservices.TaxasDeJuros.Services.Services
 
         public TaxaDeJurosServices(ITaxaDeJurosRepository taxaDeJurosRepository) => _taxaDeJurosRepository = taxaDeJurosRepository;
 
-        public Task<decimal> GetTaxaDeJurosPadraoAsync() => _taxaDeJurosRepository.GetValor<TaxaDeJurosPadrao>();
+        public decimal GetTaxaDeJurosPadrao() => _taxaDeJurosRepository.GetValor<TaxaDeJurosPadrao>();
 
-        public Task<decimal> GetTaxaDeJurosReduzidaAsync() => _taxaDeJurosRepository.GetValor<TaxaDeJurosReduzida>();
+        public Task<decimal> GetTaxaDeJurosReduzidaAsync() => _taxaDeJurosRepository.GetValorAsync<TaxaDeJurosReduzida>();
     }
 }

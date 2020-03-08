@@ -5,6 +5,8 @@ namespace Microservices.TaxasDeJuros.Repositories.Repositories
 {
     public interface ITaxaDeJurosRepository
     {
-        Task<decimal> GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros;
+        decimal GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros;
+
+        Task<decimal> GetValorAsync<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros;
     }
 }
