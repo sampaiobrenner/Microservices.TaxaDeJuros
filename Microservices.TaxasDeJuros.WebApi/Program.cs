@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Microservices.TaxaDeJuros.WebApi
+namespace Microservices.TaxasDeJuros.WebApi
 {
     public class Program
     {
