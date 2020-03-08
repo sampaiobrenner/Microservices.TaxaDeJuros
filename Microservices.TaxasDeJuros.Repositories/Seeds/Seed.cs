@@ -27,7 +27,7 @@ namespace Microservices.TaxasDeJuros.Repositories.Seeds
         {
             var taxaDeJurosReduzida = new TaxaDeJurosReduzidaBuilder()
                 .WithId(Guid.NewGuid())
-                .WithValor(1)
+                .WithValor(0.01m)
                 .Build();
 
             var taxaDeJurosPadrao = new TaxaDeJurosPadraoBuilder()
