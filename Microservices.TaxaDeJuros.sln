@@ -3,19 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.WebApi", "Microservices.TaxasDeJuros.WebApi\Microservices.TaxasDeJuros.WebApi.csproj", "{02D13E0D-17D7-459A-B2C9-836ACAF57313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.WebApi", "src\Microservices.TaxasDeJuros.WebApi\Microservices.TaxasDeJuros.WebApi.csproj", "{02D13E0D-17D7-459A-B2C9-836ACAF57313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Services", "Microservices.TaxasDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj", "{F2A3717B-7233-44E3-B2EB-4174A7663383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Services", "src\Microservices.TaxasDeJuros.Services\Microservices.TaxasDeJuros.Services.csproj", "{F2A3717B-7233-44E3-B2EB-4174A7663383}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Entities", "Microservices.TaxasDeJuros.Entities\Microservices.TaxasDeJuros.Entities.csproj", "{292C5F56-B8D5-42DE-922D-4A19018619DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Domain", "src\Microservices.TaxasDeJuros.Domain\Microservices.TaxasDeJuros.Domain.csproj", "{292C5F56-B8D5-42DE-922D-4A19018619DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Repositories", "Microservices.TaxasDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj", "{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Repositories", "src\Microservices.TaxasDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj", "{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{97E8ED22-EB53-4F11-A3D9-10463935A4B3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Entities.UnitTests", "Microservices.TaxasDeJuros.Entities.Tests\Microservices.TaxasDeJuros.Entities.UnitTests.csproj", "{444E6DBD-DCBD-44AB-B872-BAC9E070A981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Domain.UnitTests", "test\Microservices.TaxasDeJuros.Domain.Tests\Microservices.TaxasDeJuros.Domain.UnitTests.csproj", "{444E6DBD-DCBD-44AB-B872-BAC9E070A981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.TaxasDeJuros.WebApi.IntegrationTests", "Microservices.TaxasDeJuros.WebApi.IntegrationTests\Microservices.TaxasDeJuros.WebApi.IntegrationTests.csproj", "{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.WebApi.IntegrationTests", "test\Microservices.TaxasDeJuros.WebApi.IntegrationTests\Microservices.TaxasDeJuros.WebApi.IntegrationTests.csproj", "{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6216CC8-3013-436A-A731-CE701591FC8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4D038BB-F9F5-4CEA-A424-20136545036E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +58,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02D13E0D-17D7-459A-B2C9-836ACAF57313} = {C6216CC8-3013-436A-A731-CE701591FC8E}
+		{F2A3717B-7233-44E3-B2EB-4174A7663383} = {C6216CC8-3013-436A-A731-CE701591FC8E}
+		{292C5F56-B8D5-42DE-922D-4A19018619DD} = {C6216CC8-3013-436A-A731-CE701591FC8E}
+		{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574} = {C6216CC8-3013-436A-A731-CE701591FC8E}
+		{444E6DBD-DCBD-44AB-B872-BAC9E070A981} = {A4D038BB-F9F5-4CEA-A424-20136545036E}
+		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3} = {A4D038BB-F9F5-4CEA-A424-20136545036E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FA96CD9-6641-4307-889C-DDC15F96F6DE}
