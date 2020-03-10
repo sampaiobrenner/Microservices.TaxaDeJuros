@@ -15,8 +15,6 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.Domain.UnitTests", "test\Microservices.TaxasDeJuros.Domain.Tests\Microservices.TaxasDeJuros.Domain.UnitTests.csproj", "{444E6DBD-DCBD-44AB-B872-BAC9E070A981}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.TaxasDeJuros.WebApi.IntegrationTests", "test\Microservices.TaxasDeJuros.WebApi.IntegrationTests\Microservices.TaxasDeJuros.WebApi.IntegrationTests.csproj", "{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6216CC8-3013-436A-A731-CE701591FC8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A4D038BB-F9F5-4CEA-A424-20136545036E}"
@@ -51,10 +49,6 @@ Global
 		{444E6DBD-DCBD-44AB-B872-BAC9E070A981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{444E6DBD-DCBD-44AB-B872-BAC9E070A981}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{444E6DBD-DCBD-44AB-B872-BAC9E070A981}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,7 +59,6 @@ Global
 		{292C5F56-B8D5-42DE-922D-4A19018619DD} = {C6216CC8-3013-436A-A731-CE701591FC8E}
 		{EBC3ABEA-54D1-4DD4-9B80-9EAF632E0574} = {C6216CC8-3013-436A-A731-CE701591FC8E}
 		{444E6DBD-DCBD-44AB-B872-BAC9E070A981} = {A4D038BB-F9F5-4CEA-A424-20136545036E}
-		{68F2A5FB-9635-4BF9-8060-D5EAB9F049B3} = {A4D038BB-F9F5-4CEA-A424-20136545036E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FA96CD9-6641-4307-889C-DDC15F96F6DE}
