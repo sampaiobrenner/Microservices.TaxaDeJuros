@@ -29,7 +29,6 @@ namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
             // Assert
             response.EnsureSuccessStatusCode();
             Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
-
             Assert.Equal(taxaDeJurosPadrao, resultAsString.ParseDecimal(), 2);
         }
 
@@ -47,7 +46,6 @@ namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
             // Assert
             response.EnsureSuccessStatusCode();
             Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
-
             Assert.Equal(taxaDeJurosReduzida, resultAsString.ParseDecimal(), 2);
         }
     }
