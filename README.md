@@ -4,8 +4,8 @@
 
 ### Rotas disponíveis:    
 ```
-api/v1/taxaJuros`
-api/v2/taxaJurosPadrao`
+api/v1/taxaJuros
+api/v2/taxaJurosPadrao
 ```
 ## O MS calculador de juros está disponível no link: 
 ```
