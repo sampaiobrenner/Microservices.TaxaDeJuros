@@ -7,7 +7,7 @@ namespace Microservices.TaxasDeJuros.Domain.UnitTests
     public class TaxaDeJurosReduzidaUnitTests
     {
         [Fact]
-        public void CriarTaxaDeJurosReduzidaInvalida()
+        public void DadoInformacoesInvalidaDaTaxaDeJurosReduzida_CriarEValidarTaxaDeJuros()
         {
             var taxaDeJuros = new TaxaDeJurosReduzidaBuilder()
                 .WithId(Guid.NewGuid())
@@ -20,7 +20,7 @@ namespace Microservices.TaxasDeJuros.Domain.UnitTests
         [Theory]
         [InlineData(2.5)]
         [InlineData(12)]
-        public void CriarTaxaDeJurosReduzidaValida(decimal valor)
+        public void DadoInformacoesValidaDaTaxaDeJurosReduzida_CriarEValidarTaxaDeJuros(decimal valor)
         {
             var id = Guid.NewGuid();
 
