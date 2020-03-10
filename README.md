@@ -1,5 +1,7 @@
 # Microservices.TaxaDeJuros
 
+[![CodeFactor](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros/badge)](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros)
+
 Rotas disponíveis:                                                                    
 `api//v1/taxaJuros`
 `api//v2/taxaJurosPadrao`
