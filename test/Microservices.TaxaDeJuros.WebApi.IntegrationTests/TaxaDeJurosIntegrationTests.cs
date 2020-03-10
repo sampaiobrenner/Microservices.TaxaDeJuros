@@ -1,3 +1,4 @@
+using Microservices.TaxaDeJuros.WebApi.IntegrationTests.Extensions;
 using Microservices.TaxasDeJuros.WebApi;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Threading.Tasks;
@@ -14,20 +15,40 @@ namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
             _factory = factory;
         }
 
-        [Theory]
-        [InlineData("/api/v1/taxaJuros")]
-        [InlineData("/api/v2/taxaJurosPadrao")]
-        public async Task Get_ValidarRetornoDaTaxaDeJuros(string url)
+        [Fact]
+        public async Task Get_ValidarRetornoDaTaxaDeJurosPadrao()
         {
             // Arrange
             var client = _factory.CreateClient();
+            var taxaDeJurosPadrao = 1.00m;
 
             // Act
-            var response = await client.GetAsync(url);
+            var response = await client.GetAsync("/api/v2/taxaJurosPadrao");
+            var resultAsString = await response.Content.ReadAsStringAsync();
 
             // Assert
             response.EnsureSuccessStatusCode();
             Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
+
+            Assert.Equal(taxaDeJurosPadrao, resultAsString.ParseDecimal(), 2);
+        }
+
+        [Fact]
+        public async Task Get_ValidarRetornoDaTaxaDeJurosReduzida()
+        {
+            // Arrange
+            var client = _factory.CreateClient();
+            var taxaDeJurosReduzida = 0.01m;
+
+            // Act
+            var response = await client.GetAsync("/api/v1/taxaJuros");
+            var resultAsString = await response.Content.ReadAsStringAsync();
+
+            // Assert
+            response.EnsureSuccessStatusCode();
+            Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
+
+            Assert.Equal(taxaDeJurosReduzida, resultAsString.ParseDecimal(), 2);
         }
     }
 }
