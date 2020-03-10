@@ -16,7 +16,7 @@ namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
         }
 
         [Fact]
-        public async Task Get_ValidarRetornoDaTaxaDeJurosPadrao()
+        public async Task Get_DadoEndpointDeTaxaDeJurosPadrao_RetornaTaxaDeJurosPadrao()
         {
             // Arrange
             var client = _factory.CreateClient();
@@ -34,7 +34,7 @@ namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
         }
 
         [Fact]
-        public async Task Get_ValidarRetornoDaTaxaDeJurosReduzida()
+        public async Task Get_DadoEndpointDeTaxaDeJurosReduzida_RetornaTaxaDeJurosReduzida()
         {
             // Arrange
             var client = _factory.CreateClient();
