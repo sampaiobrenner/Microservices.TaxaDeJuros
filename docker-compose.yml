@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  microservices.taxadejuros.webapi:
-    image: ${DOCKER_REGISTRY-}microservicestaxadejuroswebapi
+  microservices.taxasdejuros.webapi:
+    image: ${DOCKER_REGISTRY-}microservicestaxasdejuroswebapi
     build:
       context: .
-      dockerfile: Microservices.TaxaDeJuros.WebApi/Dockerfile
+      dockerfile: src/Microservices.TaxasDeJuros.WebApi/Dockerfile

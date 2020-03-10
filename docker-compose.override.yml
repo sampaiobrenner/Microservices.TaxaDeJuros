@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  microservices.taxadejuros.webapi:
+  microservices.taxasdejuros.webapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:

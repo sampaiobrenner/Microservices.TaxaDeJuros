@@ -6,10 +6,13 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Microservices.TaxasDeJuros.WebApi/Microservices.TaxasDeJuros.WebApi.csproj", "Microservices.TaxasDeJuros.WebApi/"]
-RUN dotnet restore "Microservices.TaxasDeJuros.WebApi/Microservices.TaxasDeJuros.WebApi.csproj"
+COPY ["src/Microservices.TaxasDeJuros.WebApi/Microservices.TaxasDeJuros.WebApi.csproj", "src/Microservices.TaxasDeJuros.WebApi/"]
+COPY ["src/Microservices.TaxasDeJuros.Services/Microservices.TaxasDeJuros.Services.csproj", "src/Microservices.TaxasDeJuros.Services/"]
+COPY ["src/Microservices.TaxasDeJuros.Repositories/Microservices.TaxasDeJuros.Repositories.csproj", "src/Microservices.TaxasDeJuros.Repositories/"]
+COPY ["src/Microservices.TaxasDeJuros.Domain/Microservices.TaxasDeJuros.Domain.csproj", "src/Microservices.TaxasDeJuros.Domain/"]
+RUN dotnet restore "src/Microservices.TaxasDeJuros.WebApi/Microservices.TaxasDeJuros.WebApi.csproj"
 COPY . .
-WORKDIR "/src/Microservices.TaxasDeJuros.WebApi"
+WORKDIR "/src/src/Microservices.TaxasDeJuros.WebApi"
 RUN dotnet build "Microservices.TaxasDeJuros.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
