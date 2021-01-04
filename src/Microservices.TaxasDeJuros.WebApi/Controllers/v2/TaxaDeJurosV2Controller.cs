@@ -1,23 +1,23 @@
-﻿using Microservices.TaxasDeJuros.Services.Services;
-using Microservices.TaxasDeJuros.WebApi.Controllers.Base;
+﻿using Microservices.TaxasDeJuros.WebApi.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Microservices.TaxasDeJuros.Services.Abstractions;
 
 namespace Microservices.TaxasDeJuros.WebApi.Controllers.v2
 {
     [ApiVersion("2")]
     public class TaxaDeJurosV2Controller : BaseController
     {
-        private readonly ITaxaDeJurosServices _taxaDeJurosServices;
+        private readonly ITaxaDeJurosService _taxaDeJurosService;
 
-        public TaxaDeJurosV2Controller(ITaxaDeJurosServices taxaDeJurosServices) => _taxaDeJurosServices = taxaDeJurosServices;
+        public TaxaDeJurosV2Controller(ITaxaDeJurosService taxaDeJurosService) => _taxaDeJurosService = taxaDeJurosService;
 
         [HttpGet("taxaJurosPadrao")]
         public IActionResult Get()
         {
             try
             {
-                return Ok(_taxaDeJurosServices.GetTaxaDeJurosPadrao());
+                return Ok(_taxaDeJurosService.GetTaxaDeJurosPadrao());
             }
             catch (Exception ex)
             {

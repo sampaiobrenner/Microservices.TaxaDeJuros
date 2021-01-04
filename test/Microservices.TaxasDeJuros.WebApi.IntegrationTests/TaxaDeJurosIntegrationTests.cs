@@ -1,10 +1,9 @@
-using Microservices.TaxaDeJuros.WebApi.IntegrationTests.Extensions;
-using Microservices.TaxasDeJuros.WebApi;
-using Microsoft.AspNetCore.Mvc.Testing;
 using System.Threading.Tasks;
+using Microservices.TaxasDeJuros.WebApi.IntegrationTests.Extensions;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests
+namespace Microservices.TaxasDeJuros.WebApi.IntegrationTests
 {
     public class TaxaDeJurosIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {

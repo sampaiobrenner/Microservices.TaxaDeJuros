@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace Microservices.TaxaDeJuros.WebApi.IntegrationTests.Extensions
+namespace Microservices.TaxasDeJuros.WebApi.IntegrationTests.Extensions
 {
     public static class StringExtensions
     {

@@ -1,24 +1,28 @@
-﻿using Microservices.TaxasDeJuros.Services.Services;
-using Microservices.TaxasDeJuros.WebApi.Controllers.Base;
+﻿using Microservices.TaxasDeJuros.WebApi.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
+using Microservices.TaxasDeJuros.Services.Abstractions;
 
 namespace Microservices.TaxasDeJuros.WebApi.Controllers.v1
 {
     [ApiVersion("1")]
     public class TaxaDeJurosV1Controller : BaseController
     {
-        private readonly ITaxaDeJurosServices _taxaDeJurosServices;
+        private readonly ITaxaDeJurosService _taxaDeJurosService;
 
-        public TaxaDeJurosV1Controller(ITaxaDeJurosServices taxaDeJurosServices) => _taxaDeJurosServices = taxaDeJurosServices;
+        public TaxaDeJurosV1Controller(ITaxaDeJurosService taxaDeJurosService)
+        {
+            _taxaDeJurosService = taxaDeJurosService;
+        }
 
         [HttpGet("taxaJuros")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(CancellationToken cancellationToken)
         {
             try
             {
-                return Ok(await _taxaDeJurosServices.GetTaxaDeJurosReduzidaAsync());
+                return Ok(await _taxaDeJurosService.GetTaxaDeJurosReduzidaAsync(cancellationToken));
             }
             catch (Exception ex)
             {

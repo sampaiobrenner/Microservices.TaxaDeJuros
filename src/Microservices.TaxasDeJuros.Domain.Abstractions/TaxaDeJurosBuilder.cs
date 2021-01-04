@@ -1,6 +1,4 @@
-﻿using Microservices.TaxasDeJuros.Domain.Base;
-
-namespace Microservices.TaxasDeJuros.Domain.Builders
+﻿namespace Microservices.TaxasDeJuros.Domain.Abstractions
 {
     public abstract class TaxaDeJurosBuilder<TBuilder, TEntity> : BuilderBase<TBuilder, TEntity>
         where TBuilder : TaxaDeJurosBuilder<TBuilder, TEntity>

@@ -1,8 +1,10 @@
-﻿using Microservices.TaxasDeJuros.Domain;
-using Microservices.TaxasDeJuros.Repositories.Context;
+﻿using Microservices.TaxasDeJuros.Repositories.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Microservices.TaxasDeJuros.Domain.Abstractions;
+using Microservices.TaxasDeJuros.Repositories.Abstractions;
 
 namespace Microservices.TaxasDeJuros.Repositories.Repositories
 {
@@ -10,12 +12,19 @@ namespace Microservices.TaxasDeJuros.Repositories.Repositories
     {
         private readonly TaxaDeJurosDbContext _context;
 
-        public TaxaDeJurosRepository(TaxaDeJurosDbContext context) => _context = context;
+        public TaxaDeJurosRepository(TaxaDeJurosDbContext context)
+        {
+            _context = context;
+        }
 
-        public decimal GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
-            _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefault();
+        public decimal GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros
+        {
+            return _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefault();
+        }
 
-        public Task<decimal> GetValorAsync<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
-            _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefaultAsync();
+        public Task<decimal> GetValorAsync<TTaxaDeJuros>(CancellationToken cancellationToken) where TTaxaDeJuros : TaxaDeJuros
+        {
+            return _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefaultAsync(cancellationToken);
+        }
     }
 }

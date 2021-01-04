@@ -1,4 +1,6 @@
-﻿namespace Microservices.TaxasDeJuros.Domain.Builders
+﻿using Microservices.TaxasDeJuros.Domain.Abstractions;
+
+namespace Microservices.TaxasDeJuros.Domain
 {
     public sealed class TaxaDeJurosPadraoBuilder : TaxaDeJurosBuilder<TaxaDeJurosPadraoBuilder, TaxaDeJurosPadrao>
     {

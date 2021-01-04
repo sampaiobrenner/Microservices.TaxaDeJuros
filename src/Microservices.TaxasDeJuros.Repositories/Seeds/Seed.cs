@@ -1,10 +1,11 @@
 ﻿using Microservices.TaxasDeJuros.Domain;
-using Microservices.TaxasDeJuros.Domain.Builders;
 using Microservices.TaxasDeJuros.Repositories.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microservices.TaxasDeJuros.Domain.Abstractions;
+using Microservices.TaxasDeJuros.Repositories.Abstractions;
 
 namespace Microservices.TaxasDeJuros.Repositories.Seeds
 {

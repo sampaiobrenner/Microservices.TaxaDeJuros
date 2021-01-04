@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microservices.TaxasDeJuros.Domain.Base
+namespace Microservices.TaxasDeJuros.Domain.Abstractions
 {
     public abstract class BuilderBase<TBuilder, TEntity>
         where TBuilder : BuilderBase<TBuilder, TEntity>

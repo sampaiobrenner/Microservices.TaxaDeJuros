@@ -1,5 +1,4 @@
-﻿using Microservices.TaxasDeJuros.Domain.Builders;
-using System;
+﻿using System;
 using Xunit;
 
 namespace Microservices.TaxasDeJuros.Domain.UnitTests

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Microservices.TaxasDeJuros.Repositories\Microservices.TaxasDeJuros.Repositories.csproj" />
+    <ProjectReference Include="..\Microservices.TaxasDeJuros.Services.Abstractions\Microservices.TaxasDeJuros.Services.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>

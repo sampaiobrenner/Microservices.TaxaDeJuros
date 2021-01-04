@@ -1,4 +1,5 @@
 ﻿using Microservices.TaxasDeJuros.Domain;
+using Microservices.TaxasDeJuros.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

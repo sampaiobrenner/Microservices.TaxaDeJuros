@@ -1,4 +1,5 @@
 ﻿using System;
+using Microservices.TaxasDeJuros.Domain.Abstractions;
 
 namespace Microservices.TaxasDeJuros.Domain
 {
