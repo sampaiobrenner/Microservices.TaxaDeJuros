@@ -10,9 +10,9 @@ namespace Microservices.TaxasDeJuros.Repositories.Seeds
 {
     public class Seed : ISeed
     {
-        private readonly ITaxaDeJurosDbContext _context;
+        private readonly TaxaDeJurosDbContext _context;
 
-        public Seed(ITaxaDeJurosDbContext context) => _context = context;
+        public Seed(TaxaDeJurosDbContext context) => _context = context;
 
         public void Execute() => ExecuteAsync().Wait();
 

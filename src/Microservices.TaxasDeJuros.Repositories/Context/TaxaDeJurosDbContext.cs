@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Microservices.TaxasDeJuros.Repositories.Context
 {
-    public class TaxaDeJurosDbContext : DbContext, ITaxaDeJurosDbContext
+    public class TaxaDeJurosDbContext : DbContext
     {
         public TaxaDeJurosDbContext(DbContextOptions options) : base(options)
         {

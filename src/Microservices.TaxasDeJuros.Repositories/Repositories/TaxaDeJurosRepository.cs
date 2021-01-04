@@ -8,9 +8,9 @@ namespace Microservices.TaxasDeJuros.Repositories.Repositories
 {
     public class TaxaDeJurosRepository : ITaxaDeJurosRepository
     {
-        private readonly ITaxaDeJurosDbContext _context;
+        private readonly TaxaDeJurosDbContext _context;
 
-        public TaxaDeJurosRepository(ITaxaDeJurosDbContext context) => _context = context;
+        public TaxaDeJurosRepository(TaxaDeJurosDbContext context) => _context = context;
 
         public decimal GetValor<TTaxaDeJuros>() where TTaxaDeJuros : TaxaDeJuros =>
             _context.TaxasDeJuros.OfType<TTaxaDeJuros>().Select(x => x.Valor).FirstOrDefault();
