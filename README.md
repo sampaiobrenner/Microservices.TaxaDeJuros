@@ -16,13 +16,3 @@ https://github.com/sampaiobrenner/Microservices.CalculadorDeJuros
 ```
 https://hub.docker.com/r/sampaiobrenner/microservices-taxa-de-juros
 ```
-
-### Para executar o container e efetuar o build do projeto basta executar o comando abaixo na raiz do projeto:
-```
-docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build -d
-```
-
-### Para somente executar o container basta executar o comando abaixo na raiz do projeto:
-```
-docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
-```
