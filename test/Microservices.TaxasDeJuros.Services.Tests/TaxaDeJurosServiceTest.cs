@@ -33,7 +33,19 @@ namespace Microservices.TaxasDeJuros.Services.Tests
 
             var taxaDeJurosReduzida = await _taxaDeJurosService.GetTaxaDeJurosReduzidaAsync(_cancellationToken);
             
-            _taxaDeJurosRepository.Verify(x => x.GetValorAsync<TaxaDeJurosReduzida>(_cancellationToken));
+            _taxaDeJurosRepository.Verify(x => x.GetValorAsync<TaxaDeJurosReduzida>(_cancellationToken), Times.Once);
+            taxaDeJurosReduzida.Should().Be(taxaDeJurosReduzidaEsperada);
+        }
+        
+        [Fact]
+        public void Deve_Obter_Taxa_De_Juros_Padrao_Com_Sucesso() 
+        {
+            var taxaDeJurosReduzidaEsperada = _faker.Random.Int(0);
+            _taxaDeJurosRepository.Setup(x => x.GetValor<TaxaDeJurosPadrao>()).Returns(taxaDeJurosReduzidaEsperada);
+
+            var taxaDeJurosReduzida = _taxaDeJurosService.GetTaxaDeJurosPadrao();
+            
+            _taxaDeJurosRepository.Verify(x => x.GetValor<TaxaDeJurosPadrao>(), Times.Once);
             taxaDeJurosReduzida.Should().Be(taxaDeJurosReduzidaEsperada);
         }
     }
