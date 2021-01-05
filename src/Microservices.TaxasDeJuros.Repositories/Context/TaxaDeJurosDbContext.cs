@@ -1,5 +1,4 @@
-﻿using Microservices.TaxasDeJuros.Domain;
-using Microservices.TaxasDeJuros.Domain.Abstractions;
+﻿using Microservices.TaxasDeJuros.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
 namespace Microservices.TaxasDeJuros.Repositories.Context

@@ -15,13 +15,10 @@ namespace Microservices.TaxasDeJuros.WebApi.Extensions
             => services
                 .AddScoped<ITaxaDeJurosService, TaxaDeJurosService>();
 
-        public static IServiceCollection AddRepositories(this IServiceCollection services)
-        {
-            services.AddDbContext<TaxaDeJurosDbContext>(opt => opt.UseInMemoryDatabase("microservices-taxa-de-juros"));
-
-            return services
+        public static IServiceCollection AddRepositories(this IServiceCollection services) 
+            => services
+                .AddDbContext<TaxaDeJurosDbContext>(opt => opt.UseInMemoryDatabase("microservices-taxa-de-juros"))
                 .AddScoped<ITaxaDeJurosRepository, TaxaDeJurosRepository>()
                 .AddScoped<ISeed, Seed>();
-        }
     }
 }
