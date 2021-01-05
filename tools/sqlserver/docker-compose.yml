@@ -1,0 +1,20 @@
+version: "3.0"
+services:
+  sql-server:
+    # image: mcr.microsoft.com/mssql/server:2017-latest # SQL Server 2017
+    image: mcr.microsoft.com/mssql/server:2019-latest # SQL Server 2019
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=agesune1!@"
+    ports: 
+      - "1433:1433"
+    restart: unless-stopped
+    networks: 
+      - default
+      
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.5.0/24     
