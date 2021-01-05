@@ -1,0 +1,14 @@
+name: API Image
+
+on:
+  pull_request:
+    branches: [ master, release ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file ./src/Microservices.TaxasDeJuros.WebApi/Dockerfile --tag my-image-name:$(date +%s)
