@@ -1,4 +1,6 @@
+using System.Net.Http;
 using System.Threading.Tasks;
+using FluentAssertions;
 using Microservices.TaxasDeJuros.WebApi.IntegrationTests.Extensions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
@@ -7,45 +9,33 @@ namespace Microservices.TaxasDeJuros.WebApi.IntegrationTests
 {
     public class TaxaDeJurosIntegrationTests : IClassFixture<WebApplicationFactory<Startup>>
     {
-        private readonly WebApplicationFactory<Startup> _factory;
-
+        private readonly HttpClient _httpClient;
+        
         public TaxaDeJurosIntegrationTests(WebApplicationFactory<Startup> factory)
         {
-            _factory = factory;
+            _httpClient = factory.CreateClient();
         }
 
         [Fact]
         public async Task Get_DadoEndpointDeTaxaDeJurosPadrao_RetornaTaxaDeJurosPadrao()
         {
-            // Arrange
-            var client = _factory.CreateClient();
-            var taxaDeJurosPadrao = 1.00m;
+            const decimal taxaDeJurosPadraoEsperada = 1.00m;
 
-            // Act
-            var response = await client.GetAsync("/api/v2/taxaJurosPadrao");
-            var resultAsString = await response.Content.ReadAsStringAsync();
-
-            // Assert
-            response.EnsureSuccessStatusCode();
-            Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
-            Assert.Equal(taxaDeJurosPadrao, resultAsString.ParseDecimal(), 2);
+            var response = await _httpClient.GetAsync("/api/v2/taxaJurosPadrao");
+            var taxaDeJurosPadrao = await response.ToObjectAsync<decimal>();
+            
+            taxaDeJurosPadrao.Should().Be(taxaDeJurosPadraoEsperada);
         }
 
         [Fact]
         public async Task Get_DadoEndpointDeTaxaDeJurosReduzida_RetornaTaxaDeJurosReduzida()
         {
-            // Arrange
-            var client = _factory.CreateClient();
-            var taxaDeJurosReduzida = 0.01m;
+            const decimal taxaDeJurosReduzidaEsperada = 0.01m;
 
-            // Act
-            var response = await client.GetAsync("/api/v1/taxaJuros");
-            var resultAsString = await response.Content.ReadAsStringAsync();
-
-            // Assert
-            response.EnsureSuccessStatusCode();
-            Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
-            Assert.Equal(taxaDeJurosReduzida, resultAsString.ParseDecimal(), 2);
+            var response = await _httpClient.GetAsync("/api/v1/taxaJuros");
+            var taxaDeJurosReduzida = await response.ToObjectAsync<decimal>();
+            
+            taxaDeJurosReduzida.Should().Be(taxaDeJurosReduzidaEsperada);
         }
     }
 }
