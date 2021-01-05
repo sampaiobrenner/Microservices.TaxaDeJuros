@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 
-namespace Microservices.TaxasDeJuros.Domain.UnitTests
+namespace Microservices.TaxasDeJuros.Domain.Tests
 {
     public class TaxaDeJurosReduzidaUnitTests
     {

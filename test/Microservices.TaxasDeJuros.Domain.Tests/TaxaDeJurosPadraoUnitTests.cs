@@ -2,7 +2,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Microservices.TaxasDeJuros.Domain.UnitTests
+namespace Microservices.TaxasDeJuros.Domain.Tests
 {
     public class TaxaDeJurosPadraoUnitTests
     {
