@@ -21,7 +21,7 @@ COPY ./src/Microservices.TaxasDeJuros.Repositories/*.csproj ./Microservices.Taxa
 COPY ./src/Microservices.TaxasDeJuros.Services/*.csproj ./Microservices.TaxasDeJuros.Services/
 COPY ./src/Microservices.TaxasDeJuros.WebApi/*.csproj ./Microservices.TaxasDeJuros.WebApi/
 
-COPY ./NuGet.Config ./
+#COPY ./NuGet.Config ./
 #COPY ./Directory.Build.props ./
 
 RUN dotnet restore ./Microservices.TaxasDeJuros.WebApi
