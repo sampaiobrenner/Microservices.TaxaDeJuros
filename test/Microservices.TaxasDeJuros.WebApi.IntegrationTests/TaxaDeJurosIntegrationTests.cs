@@ -17,7 +17,7 @@ namespace Microservices.TaxasDeJuros.WebApi.IntegrationTests
         }
 
         [Fact]
-        public async Task Get_DadoEndpointDeTaxaDeJurosPadrao_RetornaTaxaDeJurosPadrao()
+        public async Task Deve_Retornar_Taxa_De_Juros_Padrao_Com_Sucesso()
         {
             const decimal taxaDeJurosPadraoEsperada = 1.00m;
 
@@ -28,7 +28,7 @@ namespace Microservices.TaxasDeJuros.WebApi.IntegrationTests
         }
 
         [Fact]
-        public async Task Get_DadoEndpointDeTaxaDeJurosReduzida_RetornaTaxaDeJurosReduzida()
+        public async Task Deve_Retornar_Taxa_De_Juros_Reduzida_Com_Sucesso()
         {
             const decimal taxaDeJurosReduzidaEsperada = 0.01m;
 

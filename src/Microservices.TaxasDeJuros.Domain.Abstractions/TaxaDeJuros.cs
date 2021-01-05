@@ -10,7 +10,7 @@ namespace Microservices.TaxasDeJuros.Domain.Abstractions
 
         private void SetValor(decimal valor)
         {
-            if (default == valor)
+            if (valor <= 0)
             {
                 AddError("O valor da taxa de juros deve ser maior que zero.");
                 return;

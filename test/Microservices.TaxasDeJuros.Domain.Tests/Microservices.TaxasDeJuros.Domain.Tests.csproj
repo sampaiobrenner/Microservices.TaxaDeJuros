@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
@@ -17,6 +18,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Microservices.TaxasDeJuros.Domain\Microservices.TaxasDeJuros.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bogus, Version=32.0.2.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a">
+      <HintPath>..\..\..\..\..\Users\matheus.brenner\.nuget\packages\bogus\32.0.2\lib\netstandard2.0\Bogus.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
