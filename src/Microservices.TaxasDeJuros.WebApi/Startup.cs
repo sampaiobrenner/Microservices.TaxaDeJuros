@@ -24,6 +24,7 @@ namespace Microservices.TaxasDeJuros.WebApi
                 .AddApiVersioning()
                 .AddServices()
                 .AddRepositories();
+            
         }
     }
 }
