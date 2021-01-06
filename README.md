@@ -1,7 +1,7 @@
 ﻿# Microservices.TaxaDeJuros
 
-![Build/Test](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/Build/Test/badge.svg?branch=master)
-![CodeQL](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/CodeQL/badge.svg?branch=master)
+![Build/Test](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/Build/Test/badge.svg)
+![CodeQL](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/CodeQL/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros/badge)](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros)
 
 ### Rotas disponíveis:    
