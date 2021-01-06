@@ -36,10 +36,10 @@ COPY ./src/Microservices.TaxasDeJuros.Services/. ./Microservices.TaxasDeJuros.Se
 COPY ./src/Microservices.TaxasDeJuros.WebApi/. ./Microservices.TaxasDeJuros.WebApi/
 
 WORKDIR /src/Microservices.TaxasDeJuros.WebApi
-RUN dotnet build -c Release --no-restore -o /app/build 
+RUN dotnet build "Microservices.TaxasDeJuros.WebApi.csproj" -c Release --no-restore -o /app/build 
 
 FROM build AS publish
-RUN dotnet publish -c Release --no-restore -o /app/publish
+RUN dotnet publish "Microservices.TaxasDeJuros.WebApi.csproj" -c Release --no-restore -o /app/publish
 
 FROM base AS final
 WORKDIR /app
