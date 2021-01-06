@@ -7,6 +7,7 @@ using Microservices.TaxasDeJuros.Services.Abstractions;
 using Moq;
 using Xunit;
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
 
 namespace Microservices.TaxasDeJuros.Services.Tests
 {
@@ -20,7 +21,7 @@ namespace Microservices.TaxasDeJuros.Services.Tests
         public TaxaDeJurosServiceTest()
         {
             _taxaDeJurosRepository = new Mock<ITaxaDeJurosRepository>();
-            _taxaDeJurosService = new TaxaDeJurosService(_taxaDeJurosRepository.Object);
+            _taxaDeJurosService = new TaxaDeJurosService(_taxaDeJurosRepository.Object, new Mock<ILogger<ITaxaDeJurosService>>().Object);
             _faker = new Faker();
             _cancellationToken = CancellationToken.None;
         }
