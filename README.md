@@ -1,7 +1,7 @@
 ﻿# Microservices.TaxaDeJuros
 
-![Build/Test](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/Build/Test/badge.svg?branch=master)
-![CodeQL](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/CodeQL/badge.svg?branch=master)
+![Build/Test](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/Build/Test/badge.svg)
+![CodeQL](https://github.com/sampaiobrenner/Microservices.TaxaDeJuros/workflows/CodeQL/badge.svg)
 [![CodeFactor](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros/badge)](https://www.codefactor.io/repository/github/sampaiobrenner/microservices.taxadejuros)
 
 ### Rotas disponíveis:    
@@ -16,5 +16,5 @@ https://github.com/sampaiobrenner/Microservices.CalculadorDeJuros
 
 ### O container no docker dessa aplicação está disponível no link: 
 ```
-https://hub.docker.com/r/sampaiobrenner/microservices-taxa-de-juros
+https://hub.docker.com/repository/docker/sampaiobrenner/microservices-taxas-de-juros-webapi
 ```
