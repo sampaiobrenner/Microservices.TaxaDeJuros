@@ -16,5 +16,5 @@ https://github.com/sampaiobrenner/Microservices.CalculadorDeJuros
 
 ### O container no docker dessa aplicação está disponível no link: 
 ```
-https://hub.docker.com/r/sampaiobrenner/microservices-taxa-de-juros
+https://hub.docker.com/repository/docker/sampaiobrenner/microservices-taxas-de-juros-webapi
 ```
